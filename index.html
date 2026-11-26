@@ -11,57 +11,294 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root{--army:#34402a;--dark:#20281b;--mid:#536044;--gold:#bd9a58;--paper:#f3f1e8;--ink:#252920;--muted:#6d7064;--line:#d5d4c7;--white:#fff;--soft:#e8eadf}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.top-strip{background:var(--dark);color:#e7e3d2;text-align:center;padding:8px;font-size:10px;letter-spacing:1.3px;text-transform:uppercase}.top-strip b{color:#dbc38a;margin-right:7px}.topbar{min-height:78px;background:var(--army);border-bottom:3px solid var(--gold);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:12px max(calc((100vw - 1180px)/2),20px);gap:16px}.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}.seal{width:44px;height:44px;border:1px solid #dbc38a;display:grid;place-items:center;color:#dbc38a;font-size:22px;clip-path:polygon(50% 0,95% 22%,95% 78%,50% 100%,5% 78%,5% 22%)}.brand strong{display:block;font:700 20px 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase}.brand small{display:block;color:#d0d3c4;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px}.admin-button{border:1px solid #aeb59e;color:#fff;background:transparent;padding:10px 15px;border-radius:2px;font:700 13px 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.7px}.admin-button:hover{background:#ffffff12}.nav{background:#fdfcf7;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:4px;padding:0 12px}.nav a{padding:15px 16px;color:#55594d;text-decoration:none;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;border-bottom:3px solid transparent}.nav a:hover,.nav a:focus{color:var(--army);border-color:var(--gold);outline:none}.hero{background:linear-gradient(100deg,#20281bf5,#34402ad9),linear-gradient(135deg,#596249,#889174);color:#fff;padding:48px max(calc((100vw - 1180px)/2),24px);position:relative;overflow:hidden}.hero:after{content:'PUBLIC RECORD';position:absolute;right:2%;bottom:-27px;font:700 88px 'Barlow Condensed',sans-serif;letter-spacing:5px;color:#ffffff0b;white-space:nowrap}.hero .kicker{color:#dbc38a;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.hero h1{font:700 clamp(38px,5vw,58px)/1.08 'Roboto Slab',serif;margin:13px 0}.hero p{max-width:680px;color:#e3e4dc;font-size:13px;line-height:1.7;margin:0}.main{max-width:1180px;margin:auto;padding:28px 24px 60px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:15px;border-bottom:1px solid var(--line);padding-bottom:12px;margin:0 0 15px}.section-heading h2{font:600 24px 'Roboto Slab',serif;margin:3px 0}.section-heading p{font-size:11px;color:var(--muted);margin:5px 0 0}.eyebrow{font-size:9px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase}.court-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:32px}.court-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--mid);padding:15px;display:flex;gap:12px;align-items:center;min-height:78px}.court-mark{width:38px;height:38px;display:grid;place-items:center;background:var(--soft);border:1px solid #d5dacb;color:var(--army);font:700 14px 'Barlow Condensed',sans-serif;flex:none}.court-card strong{display:block;font:700 15px 'Barlow Condensed',sans-serif;text-transform:uppercase}.court-card span{font-size:10px;color:var(--muted)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.top-strip{background:var(--dark);color:#e7e3d2;text-align:center;padding:8px;font-size:10px;letter-spacing:1.3px;text-transform:uppercase}.top-strip b{color:#dbc38a;margin-right:7px}.topbar{min-height:78px;background:var(--army);border-bottom:3px solid var(--gold);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:12px max(calc((100vw - 1180px)/2),20px);gap:16px}.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}.seal{width:44px;height:44px;border:1px solid #dbc38a;display:grid;place-items:center;color:#dbc38a;font-size:22px;clip-path:polygon(50% 0,95% 22%,95% 78%,50% 100%,5% 78%,5% 22%)}.brand strong{display:block;font:700 20px 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase}.brand small{display:block;color:#d0d3c4;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px}.admin-button{border:1px solid #aeb59e;color:#fff;background:transparent;padding:10px 15px;border-radius:2px;font:700 13px 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.7px}.admin-button:hover{background:#ffffff12}.nav{background:#fdfcf7;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:4px;padding:0 12px}.nav a{padding:15px 16px;color:#55594d;text-decoration:none;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;border-bottom:3px solid transparent}.nav a:hover,.nav a:focus{color:var(--army);border-color:var(--gold);outline:none}.hero{background:linear-gradient(100deg,#20281bf5,#34402ad9),linear-gradient(135deg,#596249,#889174);color:#fff;padding:48px max(calc((100vw - 1180px)/2),24px);position:relative;overflow:hidden}.hero:after{content:'PUBLIC RECORD';position:absolute;right:2%;bottom:-27px;font:700 88px 'Barlow Condensed',sans-serif;letter-spacing:5px;color:#ffffff0b;white-space:nowrap}.hero .kicker{color:#dbc38a;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.hero h1{font:700 clamp(38px,5vw,58px)/1.08 'Roboto Slab',serif;margin:13px 0}.hero p{max-width:680px;color:#e3e4dc;font-size:13px;line-height:1.7;margin:0}.main{max-width:1180px;margin:auto;padding:28px 24px 60px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:15px;border-bottom:1px solid var(--line);padding-bottom:12px;margin:0 0 15px}.section-heading h2{font:600 24px 'Roboto Slab',serif;margin:3px 0}.section-heading p{font-size:11px;color:var(--muted);margin:5px 0 0}.eyebrow{font-size:9px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase}.court-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:32px}.court-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--mid);padding:15px;display:flex;gap:12px;align-items:center;min-height:78px}.court-mark{width:38px;height:38px;display:grid;place-items:center;background:var(--soft);border:1px solid #d5dacb;color:var(--army);font:700 14px 'Barlow Condensed',sans-serif;flex:none}.court-mark.logo-mark{overflow:hidden;padding:3px}.court-mark.logo-mark img{width:100%;height:100%;object-fit:contain}.court-card strong{display:block;font:700 15px 'Barlow Condensed',sans-serif;text-transform:uppercase}.court-card span:last-child{font-size:10px;color:var(--muted)}
     .court-info{margin:8px 0 34px}.court-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.court-detail{background:#fff;border:1px solid var(--line);border-top:4px solid var(--army);padding:17px}.court-detail h3{margin:0 0 10px;font:700 18px 'Barlow Condensed',sans-serif;text-transform:uppercase;color:var(--army)}.court-detail p{font-size:11px;line-height:1.7;color:#565b50;margin:0}
     .filter-panel{background:#e9ebdf;border:1px solid var(--line);padding:12px;margin-bottom:12px}.filters{display:grid;grid-template-columns:minmax(220px,1fr) 190px 165px auto;gap:8px}.control{height:42px;width:100%;border:1px solid #d1d2c5;background:#fff;border-radius:2px;padding:0 11px;color:var(--ink);font-size:11px;outline:none}.control:focus{border-color:var(--mid);box-shadow:0 0 0 3px #5360441a}.search{position:relative}.search:before{content:'⌕';position:absolute;left:11px;top:5px;color:#777c6d;font-size:21px}.search input{padding-left:36px}.clear-button,.secondary-button{border:1px solid #c9cbbb;background:#fff;color:#555b4d;padding:0 12px;height:42px;font-size:10px;font-weight:700;text-transform:uppercase}.toolbar{display:flex;justify-content:space-between;align-items:center;margin:14px 0 9px}.results{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}.records-wrap{overflow:auto;background:#fff;border:1px solid var(--line)}table{width:100%;min-width:700px;border-collapse:collapse}th{background:var(--army);color:#fff;text-align:left;padding:11px 12px;font:700 11px 'Barlow Condensed',sans-serif;letter-spacing:.8px;text-transform:uppercase}td{padding:12px;border-bottom:1px solid #e6e6dc;font-size:11px;vertical-align:top}tbody tr{cursor:pointer}tbody tr:hover{background:#f5f6ef}tbody tr:last-child td{border-bottom:0}.record-title{font:600 13px/1.4 'Roboto Slab',serif}.docket{display:block;margin-top:4px;color:#606657;font:600 11px 'Barlow Condensed',sans-serif}.tag{display:inline-block;background:var(--soft);color:var(--army);padding:4px 7px;font:700 10px 'Barlow Condensed',sans-serif;text-transform:uppercase}.tag.resolution{background:#f1ead9;color:#715b2d}.empty{padding:38px 18px;text-align:center;background:#fff;border:1px dashed #c8cbbd}.empty strong{display:block;font:700 22px 'Barlow Condensed',sans-serif;text-transform:uppercase}.empty p{color:var(--muted);font-size:11px;margin:5px 0 0}
     .leadership{margin-top:42px}.leadership-intro{font-size:11px;line-height:1.65;color:var(--muted);max-width:900px;margin:-4px 0 15px}.roster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.roster-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--army)}.roster-title{display:flex;align-items:center;gap:10px;background:#f0f1e9;padding:12px;border-bottom:1px solid var(--line)}.roster-title h3{margin:0;font:700 16px 'Barlow Condensed',sans-serif;text-transform:uppercase}.roster-list{list-style:none;margin:0;padding:0}.roster-list li{display:grid;grid-template-columns:26px 1fr;gap:9px;padding:12px;border-bottom:1px solid #ebebe2}.rank{width:24px;height:24px;display:grid;place-items:center;background:var(--army);color:#fff;font:700 12px 'Barlow Condensed',sans-serif}.position-name{display:block;color:var(--muted);font-size:9px;letter-spacing:.4px;text-transform:uppercase}.holder{display:block;margin-top:4px;font-size:12px;font-weight:700}.source{display:inline-block;margin-top:5px;color:var(--mid);font-size:9px}.roster-empty{padding:20px 12px;text-align:center;color:var(--muted);font-size:10px;line-height:1.5}.notice{margin-top:22px;padding:12px 15px;border-left:3px solid var(--gold);background:#ede6d2;color:#666451;font-size:10px;line-height:1.6}.footer{background:var(--dark);color:#cfd2c5;padding:18px max(calc((100vw - 1180px)/2),24px);display:flex;justify-content:space-between;gap:12px;font-size:9px;text-transform:uppercase;letter-spacing:.7px}
-    .overlay{position:fixed;inset:0;z-index:10;display:none;align-items:center;justify-content:center;padding:16px;background:#191f15b3}.overlay.open{display:flex}.modal{width:min(650px,100%);max-height:92vh;overflow:auto;background:#fff;border-top:4px solid var(--gold);box-shadow:0 25px 80px #0005}.modal-head{display:flex;justify-content:space-between;gap:12px;padding:17px 20px;border-bottom:1px solid var(--line)}.modal-head h2{font:600 20px 'Roboto Slab',serif;margin:0}.modal-head p{font-size:10px;color:var(--muted);margin:5px 0 0}.close{width:32px;height:32px;border:1px solid var(--line);background:#f4f4ec;font-size:18px;color:#59604f}.form{padding:18px 20px 20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#505747}.field input,.field select,.field textarea{width:100%;border:1px solid #d3d5c8;padding:10px;font-size:11px;outline:none}.field textarea{height:78px;resize:vertical}.form-note{font-size:9px;color:var(--muted);line-height:1.5}.form-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}.btn{height:39px;border:1px solid #cfd2c3;background:#fff;color:#555b4d;padding:0 14px;font:700 12px 'Barlow Condensed',sans-serif;text-transform:uppercase}.btn.primary{background:var(--army);border-color:var(--army);color:#fff}.detail-body{padding:18px 20px 22px}.detail-meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:var(--soft);padding:13px}.detail-meta small{display:block;color:var(--muted);font-size:8px;text-transform:uppercase}.detail-meta strong{display:block;margin-top:4px;font-size:11px}.summary{font-size:12px;line-height:1.7;white-space:pre-wrap;color:#596052}.detail-body h3{font:600 16px 'Roboto Slab',serif}.doc-link{display:inline-block;margin-top:12px;color:var(--army);font-size:11px;font-weight:700}
+    .overlay{position:fixed;inset:0;z-index:10;display:none;align-items:center;justify-content:center;padding:16px;background:#191f15b3}.overlay.open{display:flex}.modal{width:min(650px,100%);max-height:92vh;overflow:auto;background:#fff;border-top:4px solid var(--gold);box-shadow:0 25px 80px #0005}.modal-head{display:flex;justify-content:space-between;gap:12px;padding:17px 20px;border-bottom:1px solid var(--line)}.modal-head h2{font:600 20px 'Roboto Slab',serif;margin:0}.modal-head p{font-size:10px;color:var(--muted);margin:5px 0 0}.close{width:32px;height:32px;border:1px solid var(--line);background:#f4f4ec;font-size:18px;color:#59604f}.form{padding:18px 20px 20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#50574f}.field input,.field select,.field textarea{width:100%;border:1px solid #d3d5c8;padding:10px;font-size:11px;outline:none}.field textarea{height:78px;resize:vertical}.form-note{font-size:9px;color:var(--muted);line-height:1.5}.form-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}.btn{height:39px;border:1px solid #cfd2c3;background:#fff;color:#555b4d;padding:0 14px;font:700 12px 'Barlow Condensed',sans-serif;text-transform:uppercase}.btn.primary{background:var(--army);border-color:var(--army);color:#fff}.detail-body{padding:18px 20px 22px}.detail-meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:var(--soft);padding:13px}.detail-meta small{display:block;color:var(--muted);font-size:8px;text-transform:uppercase}.detail-meta strong{display:block;margin-top:4px;font-size:11px}.summary{font-size:12px;line-height:1.7;white-space:pre-wrap;color:#596052}.detail-body h3{font:600 16px 'Roboto Slab',serif}.doc-link{display:inline-block;margin-top:12px;color:var(--army);font-size:11px;font-weight:700}
     @media(max-width:800px){.topbar{padding:12px 15px}.brand strong{font-size:17px}.brand small{font-size:7px}.nav{justify-content:flex-start;overflow-x:auto;padding:0 5px}.nav a{white-space:nowrap;padding:14px 12px;font-size:9px}.hero{padding:37px 18px}.hero h1{font-size:40px}.hero:after{font-size:58px}.main{padding:22px 14px 45px}.court-grid,.court-detail-grid,.roster-grid{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.search,.clear-button{grid-column:1/-1}.section-heading{align-items:flex-start}.footer{padding:16px;flex-direction:column}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
   <div class="top-strip"><b>Philippine Judicial Archive</b> · Public record repository</div>
-  <header class="topbar"><a class="brand" href="#top" aria-label="Philippine Judicial Archive home"><span class="seal">⚖</span><span><strong>Judicial Record Command</strong><small>Decisions · Resolutions · Leadership</small></span></a><button class="admin-button" id="admin-open">Admin access</button></header>
+  <header class="topbar"><a class="brand" href="#top" aria-label="Philippine Judicial Archive home"><img class="seal" src="IMG_f38f7ae3-5102-4b0a-8a1a-5417c4b7edd0.png" alt="Supreme Court of the Philippines seal" style="object-fit:contain;padding:4px;background:#fff;clip-path:none"><span><strong>Judicial Record Command</strong><small>Decisions · Resolutions · Leadership</small></span></a><button class="admin-button" id="admin-open">Admin access</button></header>
   <nav class="nav" aria-label="Main navigation"><a href="#archive">Decisions archive</a><a href="#courts">Court collections</a><a href="#court-information">Court information</a><a href="#leadership">Leadership directory</a><a href="#about">About</a></nav>
   <section class="hero" id="top"><div class="kicker">Organized public record index</div><h1>Decisions, indexed<br>with order.</h1><p>Browse decisions from the Supreme Court, Court of Appeals, and Court Martial. Supreme Court resolutions are included. Use search and filters to narrow the list.</p></section>
   <main class="main">
-    <section id="courts" aria-label="Court collections"><div class="court-grid"><article class="court-card"><span class="court-mark">SC</span><div><strong>Supreme Court</strong><span>Decisions and resolutions</span></div></article><article class="court-card"><span class="court-mark">CA</span><div><strong>Court of Appeals</strong><span>Decisions</span></div></article><article class="court-card"><span class="court-mark">CM</span><div><strong>Courts-Martial</strong><span>Decisions</span></div></article></div></section>
+    <section id="courts" aria-label="Court collections"><div class="court-grid"><article class="court-card"><span class="court-mark logo-mark"><img src="IMG_f38f7ae3-5102-4b0a-8a1a-5417c4b7edd0.png" alt=""></span><div><strong>Supreme Court</strong><span>Decisions and resolutions</span></div></article><article class="court-card"><span class="court-mark">CA</span><div><strong>Court of Appeals</strong><span>Decisions</span></div></article><article class="court-card"><span class="court-mark">CM</span><div><strong>Courts-Martial</strong><span>Decisions</span></div></article></div></section>
     <section id="archive" aria-labelledby="archive-title"><div class="section-heading"><div><div class="eyebrow">Case law repository</div><h2 id="archive-title">Decisions &amp; resolutions</h2><p>Browse the complete list. Search and filters help locate a record.</p></div></div><div class="filter-panel"><div class="filters"><label class="search"><input class="control" id="search" type="search" placeholder="Search title, docket, division, keywords" aria-label="Search the decisions list"></label><select class="control" id="court-filter" aria-label="Filter by court"><option value="all">All courts</option><option>Supreme Court</option><option>Court of Appeals</option><option>Court Martial</option></select><select class="control" id="type-filter" aria-label="Filter by record type"><option value="all">All types</option><option>Decision</option><option>Resolution</option></select><button class="clear-button" id="clear">Clear filters</button></div></div><div class="toolbar"><span class="results" id="results" aria-live="polite"></span><span class="eyebrow">Select a row for details</span></div><div id="records-list"></div></section>
     <section class="court-info" id="court-information" aria-labelledby="court-information-title"><div class="section-heading"><div><div class="eyebrow">Court roles and jurisdiction</div><h2 id="court-information-title">About the courts</h2><p>Background information supplied for this project.</p></div></div><div class="court-detail-grid">
-      <article class="court-detail"><h3>Supreme Court</h3><p>The Supreme Court is the highest court of the Judiciary, headed by the Chief Justice and up to six Associate Justices. The Chief Justice also leads the administration of the entire Judicial Branch. The Court interprets the Constitution and the meaning of laws, and decides cases involving serious legal questions, disputes between government branches, and violations of constitutional rights. It exercises original jurisdiction over cases affecting diplomatic or foreign affairs officials and over petitions for certiorari, prohibition, mandamus, quo warranto, and habeas corpus. It may review, affirm, reverse, or modify decisions of the lower courts, and its decisions are final and binding. It may also declare any government action, regulation, or law unconstitutional if it violates the Constitution. In addition, the Court sets rules of procedure, regulates admission to the practice of law, and supervises all courts and judicial personnel. It sits en banc or in two divisions of three Associate Justices each, and all constitutional cases are decided en banc.</p></article>
-      <article class="court-detail"><h3>Court of Appeals</h3><p>The Court of Appeals is the intermediate appellate court between the Courts-Martial and the Supreme Court. It is composed of one Presiding Justice and up to ten Associate Appellate Justices, and may sit en banc or in divisions of three Justices. It has exclusive appellate jurisdiction over final judgments, orders, and resolutions of the Courts-Martial, appeals from Non-Judicial Punishment, and administrative decisions and other matters as the Rules of Court provide. It also shares original jurisdiction with the Supreme Court over petitions for certiorari, prohibition, mandamus, and habeas corpus directed against the Courts-Martial and officers within its appellate jurisdiction. The Court may affirm, reverse, or modify a decision, or remand a case to the lower court for further proceedings, while ensuring that the rights of all parties are respected. Its decisions may be reviewed by the Supreme Court. Its Justices must have proven competence, integrity, probity, independence, and sufficient legal knowledge and experience.</p></article>
-      <article class="court-detail"><h3>Courts-Martial</h3><p>The Courts-Martial are the trial courts of the Judiciary, under the exclusive authority and supervision of the Judiciary, and no tribunal outside the Judiciary may exercise judicial power. They are headed by the Chief Military Judge, who administers the trial bench, assigns cases, and reports to the Supreme Court, assisted by Military Judges. The Courts-Martial have exclusive original jurisdiction over grave and capital felonies under the Military Penal Code, which are tried by a General Court-Martial; administrative violations, abuse of authority, misconduct, and negligence by covered personnel; and light and less grave felonies referred to formal trial. Military Judges examine evidence, hear witnesses, and conduct proceedings fairly and independently, and they do not receive instructions from any commander or official on the outcome of a case. Judgments may be appealed to the Court of Appeals. The Chief Military Judge and Military Judges must be Bar Passers with proven competence, integrity, probity, and independence.</p></article>
+      <article class="court-detail"><h3>Supreme Court</h3><p>The Supreme Court is the highest court of the Judiciary, headed by the Chief Justice and up to six Associate Justices. The Chief Justice also leads the administration of the entire Judicial Branch. The Court interprets the Constitution and decides cases involving serious legal questions.</p></article>
+      <article class="court-detail"><h3>Court of Appeals</h3><p>The Court of Appeals is the intermediate appellate court between the Courts-Martial and the Supreme Court. It reviews final judgments, orders, and resolutions of the Courts-Martial and administrative decisions within its jurisdiction.</p></article>
+      <article class="court-detail"><h3>Courts-Martial</h3><p>The Courts-Martial are the trial courts of the Judiciary under the exclusive authority and supervision of the Judiciary. They exercise original jurisdiction over grave and capital felonies and other matters assigned by law.</p></article>
     </div></section>
-    <section class="leadership" id="leadership" aria-labelledby="leadership-title"><div class="section-heading"><div><div class="eyebrow">Positions in order · office holders</div><h2 id="leadership-title">Leadership directory</h2><p>Separate court directories; not a claim that one court supervises another.</p></div><button class="secondary-button" id="manage-roster">Manage directory</button></div><p class="leadership-intro">Add positions in the correct order and enter the current holder. The directory starts empty; verify appointments and authority against official sources.</p><div class="roster-grid" id="roster"></div></section>
+    <section class="leadership" id="leadership" aria-labelledby="leadership-title"><div class="section-heading"><div><div class="eyebrow">Positions in order · office holders</div><h2 id="leadership-title">Leadership directory</h2><p>Separate court directories; not a claim that one court supervises another.</p></div><button class="secondary-button" id="manage-roster">Manage directory</button></div><p class="leadership-intro">Add positions in the correct order and enter the current holder. Verify appointments and authority against official sources.</p><div class="roster-grid" id="roster"></div></section>
     <section class="notice" id="about"><strong>About this prototype:</strong> This is not an official government website. Archive and directory data are stored locally in this browser.</section>
   </main>
   <footer class="footer"><span>Philippine Judicial Archive</span><span>Prototype · Not an official source</span></footer>
 
-  <div class="overlay" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title"><div class="modal"><div class="modal-head"><div><h2 id="auth-title">Administrator access</h2><p>Enter the administrator password to continue.</p></div><button class="close" data-close aria-label="Close">×</button></div><form class="form" id="auth-form"><div class="field"><label for="admin-password">Password</label><input id="admin-password" type="password" autocomplete="current-password" required></div><p class="form-note">Prototype access gate only. A password in a static website is visible to anyone inspecting its code and is not secure authentication.</p><div class="form-actions"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Continue</button></div></form></div></div>
-  <div class="overlay" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-title"><div class="modal"><div class="modal-head"><div><h2 id="admin-title">Add archive record</h2><p>Enter information as published in the official document.</p></div><button class="close" data-close aria-label="Close">×</button></div><form class="form" id="record-form"><div class="form-grid"><div class="field"><label for="court">Court *</label><select id="court" required><option>Supreme Court</option><option>Court of Appeals</option><option>Court Martial</option></select></div><div class="field"><label for="record-type">Record type *</label><select id="record-type" required><option>Decision</option><option>Resolution</option></select></div><div class="field"><label for="case-number">Docket / case number *</label><input id="case-number" required maxlength="100"></div><div class="field"><label for="issued-date">Date issued *</label><input id="issued-date" type="date" required></div><div class="field full"><label for="title">Case title *</label><input id="title" required maxlength="180" placeholder="Petitioner v. Respondent"></div><div class="field"><label for="division">Division / panel</label><input id="division" maxlength="100"></div><div class="field"><label for="author">Author / ponente</label><input id="author" maxlength="100"></div><div class="field full"><label for="summary">Summary / notes</label><textarea id="summary" maxlength="3000"></textarea></div><div class="field full"><label for="document-url">Document URL</label><input id="document-url" type="url" placeholder="https://"></div></div><p class="form-note">Resolutions are permitted only for Supreme Court records. Saving is local to this browser.</p><div class="form-actions"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Save record</button></div></form></div></div>
-  <div class="overlay" id="roster-modal" role="dialog" aria-modal="true" aria-labelledby="roster-form-title"><div class="modal"><div class="modal-head"><div><h2 id="roster-form-title">Add directory position</h2><p>Set its order and name the holder of the position.</p></div><button class="close" data-close aria-label="Close">×</button></div><form class="form" id="roster-form"><div class="form-grid"><div class="field"><label for="roster-court">Court / command</label><select id="roster-court"><option>Supreme Court</option><option>Court of Appeals</option><option>Court Martial</option></select></div><div class="field"><label for="roster-order">Position order</label><input id="roster-order" type="number" min="1" max="99" required value="1"></div><div class="field"><label for="roster-position">Position title *</label><input id="roster-position" required maxlength="100" placeholder="e.g. Chief Justice"></div><div class="field"><label for="roster-holder">Position holder *</label><input id="roster-holder" required maxlength="120" placeholder="Full name"></div><div class="field full"><label for="roster-source">Official source URL</label><input id="roster-source" type="url" placeholder="https://"></div></div><p class="form-note">Directory changes are local to this browser and do not publish to a shared server.</p><div class="form-actions"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Save position</button></div></form></div></div>
+  <div class="overlay" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title"><div class="modal"><div class="modal-head"><div><h2 id="auth-title">Administrator access</h2><p>Enter the administrator password to continue.</p></div><button class="close" data-close aria-label="Close">×</button></div><form class="form" id="auth-form"><div class="field"><label for="admin-password">Password</label><input id="admin-password" type="password" autocomplete="current-password" required></div><p class="form-note">Prototype access gate only.</p><div class="form-actions"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Continue</button></div></form></div></div>
+  <div class="overlay" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-title"><div class="modal"><div class="modal-head"><div><h2 id="admin-title">Add archive record</h2><p>Enter information as published in the official document.</p></div><button class="close" data-close aria-label="Close">×</button></div><form class="form" id="record-form"><div class="form-grid"><div class="field"><label for="court">Court *</label><select id="court" required><option>Supreme Court</option><option>Court of Appeals</option><option>Court Martial</option></select></div><div class="field"><label for="record-type">Record type *</label><select id="record-type" required><option>Decision</option><option>Resolution</option></select></div><div class="field"><label for="case-number">Docket / case number *</label><input id="case-number" required maxlength="100"></div><div class="field"><label for="issued-date">Date issued *</label><input id="issued-date" type="date" required></div><div class="field full"><label for="title">Case title *</label><input id="title" required maxlength="180"></div><div class="field"><label for="division">Division / panel</label><input id="division" maxlength="100"></div><div class="field"><label for="author">Author / ponente</label><input id="author" maxlength="100"></div><div class="field full"><label for="summary">Summary / notes</label><textarea id="summary" maxlength="3000"></textarea></div><div class="field full"><label for="document-url">Document URL</label><input id="document-url" type="url" placeholder="https://"></div></div><p class="form-note">Resolutions are permitted only for Supreme Court records.</p><div class="form-actions"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Save record</button></div></form></div></div>
+  <div class="overlay" id="roster-modal" role="dialog" aria-modal="true" aria-labelledby="roster-form-title"><div class="modal"><div class="modal-head"><div><h2 id="roster-form-title">Add directory position</h2><p>Set its order and name the holder.</p></div><button class="close" data-close aria-label="Close">×</button></div><form class="form" id="roster-form"><div class="form-grid"><div class="field"><label for="roster-court">Court / command</label><select id="roster-court"><option>Supreme Court</option><option>Court of Appeals</option><option>Court Martial</option></select></div><div class="field"><label for="roster-order">Position order</label><input id="roster-order" type="number" min="1" max="99" required value="1"></div><div class="field"><label for="roster-position">Position title *</label><input id="roster-position" required maxlength="100"></div><div class="field"><label for="roster-holder">Position holder *</label><input id="roster-holder" required maxlength="120"></div><div class="field full"><label for="roster-source">Official source URL</label><input id="roster-source" type="url" placeholder="https://"></div></div><p class="form-note">Directory changes are local to this browser.</p><div class="form-actions"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Save position</button></div></form></div></div>
   <div class="overlay" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title"><div class="modal"><div class="modal-head"><div><h2 id="detail-title">Record details</h2><p id="detail-subtitle"></p></div><button class="close" data-close aria-label="Close">×</button></div><div class="detail-body" id="detail-body"></div></div></div>
+
   <script>
-    const ADMIN_PASSWORD='JUDICIARY2026';
-    const RECORDS_KEY='judiciary-archive-records-v3',ROSTER_KEY='judiciary-archive-leadership-v3';
-    try{if(!localStorage.getItem('judiciary-archive-cleanup-v3')){['judiciary-archive-records-v1','judiciary-archive-records-v2','judiciary-archive-leadership-v1','judiciary-archive-leadership-v2'].forEach(key=>localStorage.removeItem(key));localStorage.setItem('judiciary-archive-cleanup-v3','done')}}catch{}
-    const $=selector=>document.querySelector(selector);let adminUnlocked=false,pendingAdminModal='#admin-modal';
-    const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]);
-    function readList(key){try{const value=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(value)?value:[]}catch{return []}}function saveList(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
-    function dateLabel(value){if(!value)return '—';const date=new Date(value+'T00:00:00');return Number.isNaN(date.getTime())?'—':new Intl.DateTimeFormat('en',{year:'numeric',month:'short',day:'numeric'}).format(date)}function validWebUrl(value){if(!value)return '';try{const url=new URL(value);return ['http:','https:'].includes(url.protocol)?url.href:''}catch{return ''}}
-    function renderRecords(){const q=$('#search').value.trim().toLowerCase(),court=$('#court-filter').value,type=$('#type-filter').value,all=readList(RECORDS_KEY);const filtered=all.filter(r=>(court==='all'||r.court===court)&&(type==='all'||r.type===type)&&(!q||[r.title,r.caseNumber,r.court,r.division,r.author,r.summary].join(' ').toLowerCase().includes(q))).sort((a,b)=>(b.date||'').localeCompare(a.date||''));$('#results').textContent=`${filtered.length} of ${all.length} records`;$('#records-list').innerHTML=filtered.length?`<div class="records-wrap"><table><thead><tr><th>Case title &amp; docket</th><th>Court</th><th>Record type</th><th>Date issued</th><th>Division / panel</th></tr></thead><tbody>${filtered.map(r=>`<tr tabindex="0" role="button" data-record="${escapeHTML(r.id)}"><td><span class="record-title">${escapeHTML(r.title)}</span><span class="docket">${escapeHTML(r.caseNumber)}</span></td><td>${escapeHTML(r.court)}</td><td><span class="tag ${r.type==='Resolution'?'resolution':''}">${escapeHTML(r.type)}</span></td><td>${escapeHTML(dateLabel(r.date))}</td><td>${escapeHTML(r.division||'—')}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty"><strong>No decisions or resolutions yet</strong><p>There are no records in this archive. Use the administrator portal to add records.</p></div>';document.querySelectorAll('[data-record]').forEach(row=>{const open=()=>showDetail(row.dataset.record);row.addEventListener('click',open);row.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();open()}})})}
-    function renderRoster(){const list=readList(ROSTER_KEY),groups=[['Supreme Court','SC'],['Court of Appeals','CA'],['Court Martial','CM']];$('#roster').innerHTML=groups.map(([court,mark])=>{const entries=list.filter(item=>item.court===court).sort((a,b)=>a.order-b.order);return `<article class="roster-card"><header class="roster-title"><span class="court-mark">${mark}</span><h3>${court}</h3></header>${entries.length?`<ol class="roster-list">${entries.map(item=>`<li><span class="rank">${escapeHTML(item.order)}</span><div><span class="position-name">${escapeHTML(item.position)}</span><span class="holder">${escapeHTML(item.holder)}</span>${validWebUrl(item.source)?`<a class="source" href="${escapeHTML(validWebUrl(item.source))}" target="_blank" rel="noopener noreferrer">Official source ↗</a>`:''}</div></li>`).join('')}</ol>`:'<div class="roster-empty">No positions or office holders added yet.</div>'}</article>`}).join('')}
-    function showDetail(id){const r=readList(RECORDS_KEY).find(item=>item.id===id);if(!r)return;$('#detail-title').textContent=r.title;$('#detail-subtitle').textContent=`${r.court} · ${r.type}`;const source=validWebUrl(r.url);$('#detail-body').innerHTML=`<div class="detail-meta"><div><small>Docket / case number</small><strong>${escapeHTML(r.caseNumber)}</strong></div><div><small>Date issued</small><strong>${escapeHTML(dateLabel(r.date))}</strong></div><div><small>Division / panel</small><strong>${escapeHTML(r.division||'Not specified')}</strong></div><div><small>Author / ponente</small><strong>${escapeHTML(r.author||'Not specified')}</strong></div></div><h3>Summary / notes</h3><div class="summary">${escapeHTML(r.summary||'No summary provided.')}</div>${source?`<a class="doc-link" href="${escapeHTML(source)}" target="_blank" rel="noopener noreferrer">Open source document ↗</a>`:''}`;openModal('#detail-modal')}
-    function openModal(id){$(id).classList.add('open');document.body.style.overflow='hidden'}function closeModals(){document.querySelectorAll('.overlay.open').forEach(modal=>modal.classList.remove('open'));document.body.style.overflow=''}
-    function requestAdmin(target){pendingAdminModal=target;if(adminUnlocked){openModal(target);return}$('#admin-password').value='';openModal('#auth-modal');setTimeout(()=>$('#admin-password').focus(),50)}
-    document.querySelectorAll('.nav a').forEach(link=>link.addEventListener('click',event=>{const target=document.querySelector(link.getAttribute('href'));if(target){event.preventDefault();target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});history.replaceState(null,'',link.getAttribute('href'))}}));
-    $('#admin-open').addEventListener('click',()=>requestAdmin('#admin-modal'));$('#manage-roster').addEventListener('click',()=>requestAdmin('#roster-modal'));$('#auth-form').addEventListener('submit',event=>{event.preventDefault();if($('#admin-password').value!==ADMIN_PASSWORD){alert('Incorrect password.');$('#admin-password').select();return}adminUnlocked=true;closeModals();openModal(pendingAdminModal)});
-    document.querySelectorAll('[data-close]').forEach(button=>button.addEventListener('click',closeModals));document.querySelectorAll('.overlay').forEach(overlay=>overlay.addEventListener('click',event=>{if(event.target===overlay)closeModals()}));document.addEventListener('keydown',event=>{if(event.key==='Escape')closeModals()});
-    ['#search','#court-filter','#type-filter'].forEach(selector=>$(selector).addEventListener('input',renderRecords));$('#clear').addEventListener('click',()=>{$('#search').value='';$('#court-filter').value='all';$('#type-filter').value='all';renderRecords()});$('#court').addEventListener('change',()=>{const isSC=$('#court').value==='Supreme Court',resolution=$('#record-type').querySelector('option[value="Resolution"]');resolution.disabled=!isSC;if(!isSC&&$('#record-type').value==='Resolution')$('#record-type').value='Decision'});
-    $('#record-form').addEventListener('submit',event=>{event.preventEvent();if(!adminUnlocked)return alert('Administrator access is required.');const court=$('#court').value,type=$('#record-type').value;if(type==='Resolution'&&court!=='Supreme Court')return alert('Only Supreme Court resolutions can be added.');const rawUrl=$('#document-url').value.trim();if(rawUrl&&!validWebUrl(rawUrl))return alert('Use a valid http or https document URL.');const records=readList(RECORDS_KEY);records.push({id:globalThis.crypto?.randomUUID?.()||String(Date.now()),court,type,caseNumber:$('#case-number').value.trim(),date:$('#issued-date').value,title:$('#title').value.trim(),division:$('#division').value.trim(),author:$('#author').value.trim(),summary:$('#summary').value.trim(),url:rawUrl});if(!saveList(RECORDS_KEY,records))return alert('Could not save this record in browser storage.');event.target.reset();$('#court').value='Supreme Court';$('#record-type').querySelector('option[value="Resolution"]').disabled=false;closeModals();renderRecords()});
-    $('#roster-form').addEventListener('submit',event=>{event.preventEvent();if(!adminUnlocked)return alert('Administrator access is required.');const entry={court:$('#roster-court').value,order:Number($('#roster-order').value),position:$('#roster-position').value.trim(),holder:$('#roster-holder').value.trim(),source:$('#roster-source').value.trim()};if(entry.source&&!validWebUrl(entry.source))return alert('Use a valid http or https source URL.');const roster=readList(ROSTER_KEY),existing=roster.findIndex(item=>item.court===entry.court&&item.order===entry.order);if(existing<0)roster.push(entry);else roster[existing]=entry;if(!saveList(ROSTER_KEY,roster))return alert('Could not save the directory in browser storage.');event.target.reset();$('#roster-order').value='1';closeModals();renderRoster()});
-    renderRecords();renderRoster();
+    'use strict';
+
+    const ADMIN_PASSWORD = 'JUDICIARY2026';
+    const RECORDS_KEY = 'judiciary-archive-records-v3';
+    const ROSTER_KEY = 'judiciary-archive-leadership-v3';
+
+    try {
+      if (!localStorage.getItem('judiciary-archive-cleanup-v3')) {
+        ['judiciary-archive-records-v1','judiciary-archive-records-v2','judiciary-archive-leadership-v1','judiciary-archive-leadership-v2'].forEach(key => localStorage.removeItem(key));
+        localStorage.setItem('judiciary-archive-cleanup-v3','done');
+      }
+    } catch (error) {
+      console.warn('localStorage cleanup was unavailable.', error);
+    }
+
+    const $ = selector => document.querySelector(selector);
+    let adminUnlocked = false;
+    let pendingAdminModal = '#admin-modal';
+
+    const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+
+    function readList(key) {
+      try {
+        const value = JSON.parse(localStorage.getItem(key) || '[]');
+        return Array.isArray(value) ? value : [];
+      } catch (error) {
+        console.warn('Could not read stored list.', error);
+        return [];
+      }
+    }
+
+    function saveList(key, value) {
+      try {
+        localStorage.setItem(key, JSON.stringify(value));
+        return true;
+      } catch (error) {
+        console.error('Could not save browser data.', error);
+        return false;
+      }
+    }
+
+    function dateLabel(value) {
+      if (!value) return '—';
+      const date = new Date(value + 'T00:00:00');
+      return Number.isNaN(date.getTime()) ? '—' : new Intl.DateTimeFormat('en', {year:'numeric',month:'short',day:'numeric'}).format(date);
+    }
+
+    function validWebUrl(value) {
+      if (!value) return '';
+      try {
+        const url = new URL(value);
+        return ['http:', 'https:'].includes(url.protocol) ? url.href : '';
+      } catch (error) {
+        return '';
+      }
+    }
+
+    function renderRecords() {
+      const q = $('#search').value.trim().toLowerCase();
+      const court = $('#court-filter').value;
+      const type = $('#type-filter').value;
+      const all = readList(RECORDS_KEY);
+      const filtered = all.filter(record =>
+        (court === 'all' || record.court === court) &&
+        (type === 'all' || record.type === type) &&
+        (!q || [record.title, record.caseNumber, record.court, record.division, record.author, record.summary].join(' ').toLowerCase().includes(q))
+      ).sort((a,b) => (b.date || '').localeCompare(a.date || ''));
+
+      $('#results').textContent = `${filtered.length} of ${all.length} records`;
+      if (!filtered.length) {
+        $('#records-list').innerHTML = '<div class="empty"><strong>No decisions or resolutions yet</strong><p>No records match this view.</p></div>';
+        return;
+      }
+
+      $('#records-list').innerHTML = `<div class="records-wrap"><table><thead><tr><th>Case title &amp; docket</th><th>Court</th><th>Record type</th><th>Date issued</th><th>Division / panel</th></tr></thead><tbody>${filtered.map(record => `<tr tabindex="0" role="button" data-record="${escapeHTML(record.id)}"><td><span class="record-title">${escapeHTML(record.title)}</span><span class="docket">${escapeHTML(record.caseNumber)}</span></td><td>${escapeHTML(record.court)}</td><td><span class="tag ${record.type === 'Resolution' ? 'resolution' : ''}">${escapeHTML(record.type)}</span></td><td>${escapeHTML(dateLabel(record.date))}</td><td>${escapeHTML(record.division || '—')}</td></tr>`).join('')}</tbody></table></div>`;
+
+      document.querySelectorAll('[data-record]').forEach(row => {
+        const open = () => showDetail(row.dataset.record);
+        row.addEventListener('click', open);
+        row.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            open();
+          }
+        });
+      });
+    }
+
+    function renderRoster() {
+      const list = readList(ROSTER_KEY);
+      const groups = [['Supreme Court','SC'],['Court of Appeals','CA'],['Court Martial','CM']];
+      $('#roster').innerHTML = groups.map(([court,mark]) => {
+        const entries = list.filter(item => item.court === court).sort((a,b) => a.order - b.order);
+        return `<article class="roster-card"><header class="roster-title"><span class="court-mark">${mark}</span><h3>${court}</h3></header>${entries.length ? `<ol class="roster-list">${entries.map(item => `<li><span class="rank">${escapeHTML(item.order)}</span><div><span class="position-name">${escapeHTML(item.position)}</span><span class="holder">${escapeHTML(item.holder)}</span>${validWebUrl(item.source) ? `<a class="source" href="${escapeHTML(validWebUrl(item.source))}" target="_blank" rel="noopener noreferrer">Official source ↗</a>` : ''}</div></li>`).join('')}</ol>` : '<div class="roster-empty">No positions or office holders added yet.</div>'}</article>`;
+      }).join('');
+    }
+
+    function showDetail(id) {
+      const record = readList(RECORDS_KEY).find(item => item.id === id);
+      if (!record) return;
+      $('#detail-title').textContent = record.title;
+      $('#detail-subtitle').textContent = `${record.court} · ${record.type}`;
+      const source = validWebUrl(record.url);
+      $('#detail-body').innerHTML = `<div class="detail-meta"><div><small>Docket / case number</small><strong>${escapeHTML(record.caseNumber)}</strong></div><div><small>Date issued</small><strong>${escapeHTML(dateLabel(record.date))}</strong></div><div><small>Division / panel</small><strong>${escapeHTML(record.division || 'Not specified')}</strong></div><div><small>Author / ponente</small><strong>${escapeHTML(record.author || 'Not specified')}</strong></div></div><h3>Summary / notes</h3><div class="summary">${escapeHTML(record.summary || 'No summary provided.')}</div>${source ? `<a class="doc-link" href="${escapeHTML(source)}" target="_blank" rel="noopener noreferrer">Open source document ↗</a>` : ''}`;
+      openModal('#detail-modal');
+    }
+
+    function openModal(id) {
+      $(id).classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModals() {
+      document.querySelectorAll('.overlay.open').forEach(modal => modal.classList.remove('open'));
+      document.body.style.overflow = '';
+    }
+
+    function requestAdmin(target) {
+      pendingAdminModal = target;
+      if (adminUnlocked) {
+        openModal(target);
+        return;
+      }
+      $('#admin-password').value = '';
+      openModal('#auth-modal');
+      setTimeout(() => $('#admin-password').focus(), 50);
+    }
+
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', event => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'});
+          history.replaceState(null, '', link.getAttribute('href'));
+        }
+      });
+    });
+
+    $('#admin-open').addEventListener('click', () => requestAdmin('#admin-modal'));
+    $('#manage-roster').addEventListener('click', () => requestAdmin('#roster-modal'));
+
+    $('#auth-form').addEventListener('submit', event => {
+      event.preventDefault();
+      if ($('#admin-password').value !== ADMIN_PASSWORD) {
+        alert('Incorrect password.');
+        $('#admin-password').select();
+        return;
+      }
+      adminUnlocked = true;
+      closeModals();
+      openModal(pendingAdminModal);
+    });
+
+    document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', closeModals));
+    document.querySelectorAll('.overlay').forEach(overlay => {
+      overlay.addEventListener('click', event => {
+        if (event.target === overlay) closeModals();
+      });
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeModals();
+    });
+
+    ['#search','#court-filter','#type-filter'].forEach(selector => {
+      $(selector).addEventListener('input', renderRecords);
+    });
+
+    $('#clear').addEventListener('click', () => {
+      $('#search').value = '';
+      $('#court-filter').value = 'all';
+      $('#type-filter').value = 'all';
+      renderRecords();
+    });
+
+    $('#court').addEventListener('change', () => {
+      const isSC = $('#court').value === 'Supreme Court';
+      const resolution = $('#record-type').querySelector('option[value="Resolution"]');
+      resolution.disabled = !isSC;
+      if (!isSC && $('#record-type').value === 'Resolution') $('#record-type').value = 'Decision';
+    });
+
+    $('#record-form').addEventListener('submit', event => {
+      event.preventDefault();
+      if (!adminUnlocked) return alert('Administrator access is required.');
+
+      const court = $('#court').value;
+      const type = $('#record-type').value;
+      if (type === 'Resolution' && court !== 'Supreme Court') {
+        return alert('Only Supreme Court resolutions can be added.');
+      }
+
+      const rawUrl = $('#document-url').value.trim();
+      if (rawUrl && !validWebUrl(rawUrl)) {
+        return alert('Use a valid http or https document URL.');
+      }
+
+      const records = readList(RECORDS_KEY);
+      records.push({
+        id: globalThis.crypto?.randomUUID?.() || String(Date.now()),
+        court,
+        type,
+        caseNumber: $('#case-number').value.trim(),
+        date: $('#issued-date').value,
+        title: $('#title').value.trim(),
+        division: $('#division').value.trim(),
+        author: $('#author').value.trim(),
+        summary: $('#summary').value.trim(),
+        url: rawUrl
+      });
+
+      if (!saveList(RECORDS_KEY, records)) return alert('Could not save this record in browser storage.');
+      event.target.reset();
+      $('#court').value = 'Supreme Court';
+      $('#record-type').querySelector('option[value="Resolution"]').disabled = false;
+      closeModals();
+      renderRecords();
+    });
+
+    $('#roster-form').addEventListener('submit', event => {
+      event.preventEvent();
+    });
+
+    $('#roster-form').addEventListener('submit', event => {
+      event.preventDefault();
+      if (!adminUnlocked) return alert('Administrator access is required.');
+
+      const entry = {
+        court: $('#roster-court').value,
+        order: Number($('#roster-order').value),
+        position: $('#roster-position').value.trim(),
+        holder: $('#roster-holder').value.trim(),
+        source: $('#roster-source').value.trim()
+      };
+
+      if (!Number.isInteger(entry.order) || entry.order < 1) {
+        return alert('Position order must be a positive whole number.');
+      }
+      if (entry.source && !validWebUrl(entry.source)) {
+        return alert('Use a valid http or https source URL.');
+      }
+
+      const roster = readList(ROSTER_KEY);
+      const existing = roster.findIndex(item => item.court === entry.court && item.order === entry.order);
+      if (existing < 0) roster.push(entry); else roster[existing] = entry;
+
+      if (!saveList(ROSTER_KEY, roster)) return alert('Could not save the directory in browser storage.');
+      event.target.reset();
+      $('#roster-order').value = '1';
+      closeModals();
+      renderRoster();
+    });
+
+    renderRecords();
+    renderRoster();
   </script>
 </body>
 </html>
