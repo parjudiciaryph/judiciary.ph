@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102c25">
+  <meta name="description" content="A searchable archive of court decisions and Supreme Court resolutions.">
+  <title>Judiciary Decisions Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#17231f;--muted:#68756f;--green:#12372d;--green2:#1d5847;--gold:#d8b36a;--paper:#f6f7f3;--line:#e4e9e3;--white:#fff;--soft:#edf3ee;--shadow:0 12px 40px rgba(17,45,36,.08)}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{min-height:100vh}.topbar{height:76px;background:var(--green);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 max(calc((100vw - 1180px)/2),5.5vw);gap:20px}.brand{display:flex;align-items:center;gap:12px;color:white;text-decoration:none}.seal{width:42px;height:42px;border:1px solid rgba(216,179,106,.8);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:21px}.brand strong{display:block;font-family:'Playfair Display',serif;font-size:17px;letter-spacing:.2px}.brand small{display:block;color:#cad7d1;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;margin-top:3px}.admin-button{border:1px solid rgba(255,255,255,.35);border-radius:7px;background:transparent;color:#fff;padding:10px 15px;font-weight:600}.admin-button:hover{background:rgba(255,255,255,.1)}.hero{background:linear-gradient(110deg,rgba(11,42,33,.98),rgba(22,72,57,.95));color:white;padding:55px max(calc((100vw - 1180px)/2),5.5vw) 50px;position:relative;overflow:hidden}.hero:after{content:'§';position:absolute;right:11%;top:-65px;color:rgba(255,255,255,.035);font-family:Georgia,serif;font-size:330px}.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700}.hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,51px);line-height:1.12;max-width:640px;margin:12px 0}.hero p{color:#d5dfd9;max-width:600px;line-height:1.65;margin:0;font-size:15px}.main{max-width:1180px;margin:0 auto;padding:30px 24px 70px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-3px;margin-bottom:27px}.stat{background:white;border:1px solid var(--line);border-radius:10px;padding:17px 19px;box-shadow:0 3px 12px rgba(17,45,36,.025)}.stat span{font-size:12px;color:var(--muted)}.stat strong{font-family:'Playfair Display',serif;font-size:27px;display:block;margin-top:5px}.archive-head{display:flex;align-items:end;justify-content:space-between;margin:33px 0 16px;gap:15px}.archive-head h2{font:600 26px 'Playfair Display',serif;margin:0}.archive-head p{margin:6px 0 0;color:var(--muted);font-size:13px}.filters{display:grid;grid-template-columns:minmax(210px,1fr) 205px 175px;gap:10px;margin-bottom:17px}.control{height:45px;border:1px solid #dfe5df;background:white;border-radius:7px;padding:0 13px;color:var(--ink);width:100%;outline:none}.control:focus,textarea:focus{border-color:var(--green2);box-shadow:0 0 0 3px rgba(29,88,71,.1)}.search-wrap{position:relative}.search-wrap:before{content:'⌕';position:absolute;left:13px;top:8px;font-size:24px;color:#85918b}.search-wrap input{padding-left:40px}.results-line{font-size:12px;color:var(--muted);padding:2px 1px 12px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:white;border:1px solid var(--line);border-radius:10px;padding:20px 21px;transition:.18s;cursor:pointer;min-height:190px}.card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#ccd9d0}.card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:13px}.badge{display:inline-flex;align-items:center;gap:6px;border-radius:20px;padding:6px 10px;background:var(--soft);color:var(--green2);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.65px}.badge.resolution{background:#f8f1e4;color:#795d25}.date{font-size:11px;color:var(--muted);white-space:nowrap}.case-no{font-size:11px;color:var(--muted);letter-spacing:.2px}.card h3{font:600 19px/1.35 'Playfair Display',serif;margin:7px 0 8px}.card p{font-size:12px;line-height:1.55;color:var(--muted);margin:0}.chain{font-size:10px;color:#76827c;margin-top:15px;padding-top:12px;border-top:1px solid #edf0ec}.chain b{color:#46564e;font-weight:600}.empty{grid-column:1/-1;text-align:center;padding:56px 20px;background:#fff;border:1px dashed #d4ddd5;border-radius:10px}.empty span{font-size:28px}.empty h3{font-family:'Playfair Display',serif;margin:12px 0 6px}.empty p{color:var(--muted);font-size:13px;margin:0}.hierarchy{margin-top:42px;background:#eef3ed;border:1px solid #dfe8df;border-radius:10px;padding:21px 23px}.hierarchy h3{font:600 19px 'Playfair Display',serif;margin:0 0 6px}.hierarchy>p{color:var(--muted);font-size:12px;margin:0 0 16px}.hierarchy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.hierarchy-item{background:white;padding:14px;border-radius:7px;border:1px solid #e3e9e3}.hierarchy-item strong{display:block;font-size:12px;color:var(--green);margin-bottom:5px}.hierarchy-item span{font-size:11px;color:var(--muted);line-height:1.5}.footer{border-top:1px solid var(--line);padding:19px max(calc((100vw - 1180px)/2),5.5vw);color:var(--muted);font-size:11px;display:flex;justify-content:space-between;gap:12px}.notice{background:#fff8e9;border:1px solid #f1dfb8;border-radius:7px;color:#685323;padding:11px 13px;font-size:11px;line-height:1.5;margin-top:24px}.overlay{position:fixed;inset:0;background:rgba(9,24,19,.58);z-index:5;display:none;align-items:center;justify-content:center;padding:18px}.overlay.open{display:flex}.modal{background:#fff;border-radius:12px;width:min(620px,100%);max-height:92vh;overflow:auto;box-shadow:0 25px 80px rgba(0,0,0,.24)}.modal-header{padding:21px 24px 17px;border-bottom:1px solid var(--line);display:flex;align-items:start;justify-content:space-between;gap:16px}.modal-header h2{font:600 23px 'Playfair Display',serif;margin:0}.modal-header p{margin:5px 0 0;color:var(--muted);font-size:12px}.close{border:0;background:#f0f3f0;color:#46564e;border-radius:50%;width:32px;height:32px;font-size:19px;flex-shrink:0}.form{padding:20px 24px 24px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:700;color:#394941}.field input,.field select,.field textarea{border:1px solid #dfe5df;border-radius:6px;padding:10px 11px;background:white;outline:none;color:var(--ink);font-size:12px}.field textarea{min-height:92px;resize:vertical;line-height:1.5}.form-note{font-size:10px;line-height:1.5;color:var(--muted);margin:14px 0}.form-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:17px}.btn{border-radius:6px;padding:10px 15px;font-size:12px;font-weight:700;border:1px solid #d8dfd9;background:#fff;color:#34433c}.btn.primary{background:var(--green2);color:white;border-color:var(--green2)}.detail-body{padding:22px 24px 25px}.detail-meta{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#f6f8f5;border-radius:8px;padding:15px;margin-bottom:18px}.detail-meta small{display:block;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-size:9px;margin-bottom:4px}.detail-meta strong{font-size:12px}.detail-body h3{font:600 19px 'Playfair Display',serif;margin:5px 0 11px}.detail-body .summary{font-size:13px;line-height:1.7;color:#526159;white-space:pre-wrap}.doc-link{display:inline-flex;margin-top:14px;color:var(--green2);font-size:12px;font-weight:700;text-decoration:none}.doc-link:hover{text-decoration:underline}.detail-chain{margin-top:20px;font-size:11px;color:var(--muted);padding-top:13px;border-top:1px solid var(--line)}
+    @media(max-width:700px){.topbar{padding:0 20px}.hero{padding:42px 22px}.main{padding:25px 18px 50px}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:22px}.filters{grid-template-columns:1fr 1fr}.search-wrap{grid-column:1/-1}.cards{grid-template-columns:1fr}.hierarchy-grid{grid-template-columns:1fr}.archive-head{align-items:start}.footer{padding:17px 20px;flex-direction:column}.hero:after{right:-70px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Judiciary Decisions Archive home"><span class="seal">⚖</span><span><strong>Judiciary Archive</strong><small>Decisions &amp; resolutions</small></span></a>
+      <button class="admin-button" id="admin-open">＋ &nbsp;Admin portal</button>
+    </header>
+    <section class="hero" id="top">
+      <div class="eyebrow">Public decisions repository</div>
+      <h1>Access to the record.<br>Clarity in every decision.</h1>
+      <p>Search and browse a central archive of decisions from the Supreme Court, Court of Appeals, and Courts Martial. Supreme Court resolutions are included.</p>
+    </section>
+    <main class="main">
+      <section class="stats" aria-label="Archive totals">
+        <div class="stat"><span>Archived records</span><strong id="stat-total">0</strong></div>
+        <div class="stat"><span>Court collections</span><strong>03</strong></div>
+        <div class="stat"><span>Record types</span><strong>02</strong></div>
+      </section>
+      <section aria-labelledby="archive-title">
+        <div class="archive-head"><div><h2 id="archive-title">Browse the archive</h2><p>Search by case number, title, court, or keywords.</p></div></div>
+        <div class="filters">
+          <div class="search-wrap"><input id="search" class="control" type="search" placeholder="Search decisions…" aria-label="Search decisions"></div>
+          <select id="court-filter" class="control" aria-label="Filter by court"><option value="all">All courts</option><option value="Supreme Court">Supreme Court</option><option value="Court of Appeals">Court of Appeals</option><option value="Court Martial">Court Martial</option></select>
+          <select id="type-filter" class="control" aria-label="Filter by record type"><option value="all">All record types</option><option value="Decision">Decisions</option><option value="Resolution">Resolutions</option></select>
+        </div>
+        <div class="results-line" id="results-line" aria-live="polite"></div>
+        <div id="cards" class="cards"></div>
+      </section>
+      <section class="hierarchy" aria-labelledby="hierarchy-title">
+        <h3 id="hierarchy-title">Court collections &amp; record hierarchy</h3>
+        <p>Records are organized by court and the issuing division or panel stated in each published document.</p>
+        <div class="hierarchy-grid">
+          <div class="hierarchy-item"><strong>Supreme Court</strong><span>Supreme Court → En Banc or Division → Decision or Resolution</span></div>
+          <div class="hierarchy-item"><strong>Court of Appeals</strong><span>Court of Appeals → Division (when identified) → Decision</span></div>
+          <div class="hierarchy-item"><strong>Court Martial</strong><span>Court Martial → Panel or tribunal (when identified) → Decision</span></div>
+        </div>
+      </section>
+      <div class="notice"><strong>Demo archive:</strong> Any sample entries shown are illustrative, not official court records. This prototype stores records in this browser only. Verify documents with official sources before relying on them.</div>
+    </main>
+    <footer class="footer"><span>Judiciary Decisions Archive</span><span>An archive prototype · Not an official government website</span></footer>
+  </div>
+
+  <div class="overlay" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-title">
+    <div class="modal">
+      <div class="modal-header"><div><h2 id="admin-title">Add an archive record</h2><p>Enter the details exactly as they appear in the published document.</p></div><button class="close" data-close aria-label="Close">×</button></div>
+      <form class="form" id="record-form">
+        <div class="form-grid">
+          <div class="field"><label for="court">Court *</label><select id="court" required><option value="Supreme Court">Supreme Court</option><option value="Court of Appeals">Court of Appeals</option><option value="Court Martial">Court Martial</option></select></div>
+          <div class="field"><label for="record-type">Record type *</label><select id="record-type" required><option value="Decision">Decision</option><option value="Resolution">Resolution</option></select></div>
+          <div class="field"><label for="case-number">Docket / case number *</label><input id="case-number" required maxlength="100" placeholder="e.g. G.R. No. 000000"></div>
+          <div class="field"><label for="issued-date">Date issued *</label><input id="issued-date" type="date" required></div>
+          <div class="field full"><label for="title">Case title *</label><input id="title" required maxlength="180" placeholder="Petitioner v. Respondent"></div>
+          <div class="field"><label for="division">Division / panel</label><input id="division" maxlength="100" placeholder="As listed on the document"></div>
+          <div class="field"><label for="author">Author / ponente</label><input id="author" maxlength="100" placeholder="Optional"></div>
+          <div class="field full"><label for="summary">Summary / notes</label><textarea id="summary" maxlength="3000" placeholder="Optional summary or indexing notes"></textarea></div>
+          <div class="field full"><label for="document-url">Document URL</label><input id="document-url" type="url" placeholder="https://…"></div>
+        </div>
+        <p class="form-note">Resolutions are available only for Supreme Court records. New entries are saved in this browser's local storage in this demo; this portal does not provide authentication or shared publication.</p>
+        <div class="form-actions"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Save record</button></div>
+      </form>
+    </div>
+  </div>
+  <div class="overlay" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class="modal"><div class="modal-header"><div><h2 id="detail-title">Record details</h2><p id="detail-subtitle"></p></div><button class="close" data-close aria-label="Close">×</button></div><div class="detail-body" id="detail-body"></div></div>
+  </div>
+  <script>
+    const STORAGE_KEY='judiciary-archive-records-v1';
+    const records=[];
+    const $=s=>document.querySelector(s);
+    const cards=$('#cards');
+    const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    const dateText=value=>{if(!value)return 'Date not provided';const date=new Date(value+'T00:00:00');return new Intl.DateTimeFormat('en',{year:'numeric',month:'short',day:'numeric'}).format(date)};
+    function getRecords(){try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');return Array.isArray(saved)?saved:[]}catch{return []}}
+    function render(){
+      const query=$('#search').value.trim().toLowerCase(),court=$('#court-filter').value,type=$('#type-filter').value;
+      const filtered=getRecords().filter(record=>(court==='all'||record.court===court)&&(type==='all'||record.type===type)&&(!query||[record.caseNumber,record.title,record.court,record.division,record.author,record.summary].join(' ').toLowerCase().includes(query))).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+      $('#stat-total').textContent=getRecords().length.toLocaleString();
+      $('#results-line').textContent=`${filtered.length} ${filtered.length===1?'record':'records'} found`;
+      cards.innerHTML=filtered.length?filtered.map((record,index)=>`<article class="card" tabindex="0" role="button" data-record="${escapeHTML(record.id)}" aria-label="View ${escapeHTML(record.title)}"><div class="card-top"><span class="badge ${record.type==='Resolution'?'resolution':''}">${escapeHTML(record.court)} · ${escapeHTML(record.type)}</span><span class="date">${escapeHTML(dateText(record.date))}</span></div><div class="case-no">${escapeHTML(record.caseNumber)}</div><h3>${escapeHTML(record.title)}</h3><p>${escapeHTML(record.summary||'Open this record to view its archive details.')}</p><div class="chain"><b>Record hierarchy:</b> ${escapeHTML(record.court)}${record.division?' → '+escapeHTML(record.division):''} → ${escapeHTML(record.type)}</div></article>`).join(''):'<div class="empty"><span>⌕</span><h3>No records found</h3><p>Try a different search or filter, or add a record using the admin portal.</p></div>';
+      cards.querySelectorAll('[data-record]').forEach(card=>{card.addEventListener('click',()=>showDetail(card.dataset.record));card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();showDetail(card.dataset.record)}})});
+    }
+    function showDetail(id){const record=getRecords().find(item=>item.id===id);if(!record)return;$('#detail-title').textContent=record.title;$('#detail-subtitle').textContent=`${record.court} · ${record.type}`;$('#detail-body').innerHTML=`<div class="detail-meta"><div><small>Docket / case number</small><strong>${escapeHTML(record.caseNumber)}</strong></div><div><small>Date issued</small><strong>${escapeHTML(dateText(record.date))}</strong></div><div><small>Division / panel</small><strong>${escapeHTML(record.division||'Not specified')}</strong></div><div><small>Author / ponente</small><strong>${escapeHTML(record.author||'Not specified')}</strong></div></div><h3>Summary / notes</h3><div class="summary">${escapeHTML(record.summary||'No summary provided.')}</div>${record.url?`<a class="doc-link" href="${escapeHTML(record.url)}" target="_blank" rel="noopener noreferrer">Open source document ↗</a>`:''}<div class="detail-chain"><b>Record hierarchy:</b> ${escapeHTML(record.court)}${record.division?' → '+escapeHTML(record.division):''} → ${escapeHTML(record.type)}</div>`;openModal('#detail-modal')}
+    function openModal(selector){$(selector).classList.add('open');document.body.style.overflow='hidden'}
+    function closeModals(){document.querySelectorAll('.overlay.open').forEach(modal=>modal.classList.remove('open'));document.body.style.overflow=''}
+    $('#admin-open').addEventListener('click',()=>openModal('#admin-modal'));
+    document.querySelectorAll('[data-close]').forEach(button=>button.addEventListener('click',closeModals));
+    document.querySelectorAll('.overlay').forEach(overlay=>overlay.addEventListener('click',event=>{if(event.target===overlay)closeModals()}));
+    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeModals()});
+    ['#search','#court-filter','#type-filter'].forEach(selector=>$(selector).addEventListener('input',render));
+    $('#court').addEventListener('change',()=>{const isSupreme=$('#court').value==='Supreme Court';const resolution=$('#record-type').querySelector('option[value="Resolution"]');resolution.disabled=!isSupreme;if(!isSupreme&&$('#record-type').value==='Resolution')$('#record-type').value='Decision'});
+    $('#record-form').addEventListener('submit',event=>{event.preventDefault();const court=$('#court').value,type=$('#record-type').value;if(type==='Resolution'&&court!=='Supreme Court'){alert('Only Supreme Court resolutions can be added.');return}const record={id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),court,type,caseNumber:$('#case-number').value.trim(),date:$('#issued-date').value,title:$('#title').value.trim(),division:$('#division').value.trim(),author:$('#author').value.trim(),summary:$('#summary').value.trim(),url:$('#document-url').value.trim()};const all=getRecords();all.push(record);try{localStorage.setItem(STORAGE_KEY,JSON.stringify(all))}catch{alert('Could not save this record in browser storage.');return}event.target.reset();$('#court').value='Supreme Court';$('#record-type').value='Decision';$('#record-type').querySelector('option[value="Resolution"]').disabled=false;closeModals();render()});
+    render();
+  </script>
+</body>
+</html>
