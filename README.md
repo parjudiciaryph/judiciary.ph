@@ -1,28 +1,25 @@
 # Philippine Judicial Archive
 
-A responsive, Philippine Army-inspired front-end archive for:
+A responsive, military-inspired prototype for organizing judicial records and a separate leadership directory.
 
-- Supreme Court decisions
-- Supreme Court resolutions
+## Archive
+
+- Supreme Court decisions and resolutions
 - Court of Appeals decisions
 - Court Martial decisions
+- A browsable tabular list with case title, docket, court, type, date, and division/panel
+- Search and court/record-type filters
+- Detail view with optional source-document link
+- Admin form to add records; resolutions are limited to Supreme Court entries
 
-## Features
+## Leadership directory
 
-- Mobile-first responsive layout
-- Olive, khaki, gold, and charcoal military visual language
-- Hierarchical court and issuing-body organization
-- Search across docket numbers, titles, courts, divisions, authors, and notes
-- Court and record-type filters
-- Detail view for each archive record
-- Admin form for local record entry
-- Supreme Court-only restriction for resolutions
-- Browser-local persistence using `localStorage`
+The leadership section is distinct from court hierarchy. It lists positions in display order with the office holder and, where available, a source link. Manage Directory lets administrators add or replace a position and holder in local browser storage. The default names and links are starting reference data, not a live feed; verify and maintain them from official sources. Court-martial convening authority is case- and order-dependent and is not represented as a single permanent command chain.
 
 ## Run locally
 
-Open `index.html` in a modern browser. No build process or external package installation is required.
+Open `index.html` in a modern browser. No build process or packages are required.
 
 ## Production requirements
 
-This is a prototype, not a secure official records system. Production deployment should add server-side storage, authenticated role-based administration, document upload validation, audit logs, backups, access controls, moderation, and verification against official court publications.
+This is not a secure or official records system. Production deployment needs server-side storage, authenticated role-based administration, validated document uploads, audit logs, backups, access controls, and a process to verify archive records and leadership information against authoritative publications.
