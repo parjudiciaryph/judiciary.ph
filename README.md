@@ -1,25 +1,24 @@
 # Philippine Judicial Archive
 
-A responsive, military-inspired prototype for organizing judicial records and a separate leadership directory.
-
-## Archive
+A responsive, military-inspired prototype for the public archive of:
 
 - Supreme Court decisions and resolutions
 - Court of Appeals decisions
 - Court Martial decisions
-- A browsable tabular list with case title, docket, court, type, date, and division/panel
-- Search and court/record-type filters
-- Detail view with optional source-document link
-- Admin form to add records; resolutions are limited to Supreme Court entries
 
-## Leadership directory
+## Current prototype behavior
 
-The leadership section is distinct from court hierarchy. It lists positions in display order with the office holder and, where available, a source link. Manage Directory lets administrators add or replace a position and holder in local browser storage. The default names and links are starting reference data, not a live feed; verify and maintain them from official sources. Court-martial convening authority is case- and order-dependent and is not represented as a single permanent command chain.
+- Decisions are presented as a browsable table, with search and court/type filters.
+- The leadership directory is separate from case hierarchy. It starts empty and supports ordered positions and position holders.
+- Archive records and directory entries can be added only after entering the requested password in the front-end admin gate.
+- Existing v1 prototype data is cleared from the browser's local storage when the updated page loads; the new archive and directory start empty.
+- Court collection, leadership directory, archive, and About navigation links scroll directly to their sections.
+- All data remains in the current browser's local storage; it is not shared across visitors.
+
+## Important security limitation
+
+`JUDICIARY2026` is embedded in this static page's JavaScript. This is a convenience gate, not secure authentication: visitors can inspect the source and bypass it. Do not use it to protect confidential records or rely on it for real admin security. A production system needs a server-side authentication service, authorization checks on every write, a shared database, audit logging, backups, and appropriate access controls. The password should be rotated and stored server-side before any production use.
 
 ## Run locally
 
 Open `index.html` in a modern browser. No build process or packages are required.
-
-## Production requirements
-
-This is not a secure or official records system. Production deployment needs server-side storage, authenticated role-based administration, validated document uploads, audit logs, backups, access controls, and a process to verify archive records and leadership information against authoritative publications.
